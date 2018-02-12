@@ -82,7 +82,10 @@ const RecipeView = ({
       </Row>
       <Row className="pb-3">
         <Col sm="12">
-          <Link className="btn btn-secondary" to="/recipes"><i className="icon-arrow-left" /> Back</Link>
+          <Link className="btn btn-secondary" to="/recipes"><i
+            className="icon-arrow-left"
+          /> Back
+          </Link>
         </Col>
       </Row>
     </div>

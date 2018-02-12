@@ -24,23 +24,23 @@ class RecipeListing extends Component {
     match: null,
   }
 
-  componentDidMount = () => this.fetchRecipes();
+  componentDidMount = () => this.fetchRecipes()
 
   /**
-    * Fetch Data from API, saving to Redux
-    */
-  fetchRecipes = () => {
-    return this.props.getRecipes()
-      .then(() => this.props.getMeals())
-      .catch((err) => {
-        console.log(`Error: ${err}`);
-        return this.props.setError(err);
-      });
-  }
+   * Fetch Data from API, saving to Redux
+   */
+  fetchRecipes = () => this.props.getRecipes()
+    .then(() => this.props.getMeals())
+    .catch((err) => {
+      console.log(`Error: ${err}`);
+      return this.props.setError(err);
+    })
 
   render = () => {
     const { Layout, recipes, match } = this.props;
-    const id = (match && match.params && match.params.id) ? match.params.id : null;
+    const id = (match && match.params && match.params.id)
+      ? match.params.id
+      : null;
 
     return (
       <Layout
